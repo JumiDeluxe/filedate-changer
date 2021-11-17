@@ -24,7 +24,7 @@ def change_system_time(time):
     os.system(f'/usr/bin/date --set=\"{time}\"')
 
 def get_system_time():
-    return os.system('date')
+    return os.system('/usr/bin/date')
 
 def recreate_file(file, directory): # used to change btime
     os.system(f'/usr/bin/cat {directory}/{file} > /tmp/{file} && /usr/bin/mv /tmp/{file} {directory}/{file}')
